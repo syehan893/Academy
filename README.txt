@@ -1,0 +1,1 @@
+Syechan ganbatteh kudasai !!
