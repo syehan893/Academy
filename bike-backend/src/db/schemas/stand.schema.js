@@ -1,4 +1,4 @@
-import { EntitySchema, PrimaryColumn } from 'typeorm';
+import { EntitySchema } from 'typeorm';
 import Stand from '../../models/stand';
 
 const standSchema = new EntitySchema({

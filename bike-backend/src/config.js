@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { dirname, resolve, join } from 'path';
+import { dirname, resolve } from 'path';
 
 export default function confiure() {
     if(process.env.NODE_ENV == 'test'){
