@@ -21,9 +21,13 @@
     "babel-loader": "^8.0.6",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
+    "google-auth-library": "^5.10.1",
+    "googleapis": "^47.0.0",
     "joi": "^14.3.1",
     "mysql": "^2.17.1",
     "path": "^0.12.7",
+    "pdfkit": "^0.11.0",
+    "pdfmake": "^0.1.65",
     "sqlite": "^3.0.3",
     "supertest": "^4.0.2",
     "typeorm": "^0.2.22"
@@ -40,6 +44,7 @@
     "@babel/runtime": "^7.7.7",
     "@hapi/lab": "^22.0.3",
     "babel-core": "^7.0.0-bridge.0",
+    "eslint": "^5.16.0",
     "nodemon": "^2.0.2",
     "sonarqube-scanner": "^2.5.0"
   }
