@@ -32,6 +32,10 @@ const userSchema = new EntitySchema({
             type : 'int',
             nullable : false
         },
+        fileId : {
+            type : 'int',
+            nullable : false
+        },
     },
     relations : {
         rent : {

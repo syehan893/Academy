@@ -3,6 +3,7 @@ import UserService from '../services/user.service';
 
 const pdf = require('pdfkit');
 const fs = require('fs');
+const path = require('path')
 
 const userService = new UserService();
 
@@ -25,6 +26,28 @@ const myPdfDoc = [{
     return STATUS_CODES;
   }
 },
+{
+  method: 'POST',
+  path: '/rpdf/{id?}',
+  handler: async (request, h) => {
+    const findOne = await userService.findOne(request.params.id);
+    let id = findOne.id;
+    let name = findOne.name;
+    
+    const sourceFile = `./doc/document-${id}-${name}.pdf`
+    var query = `https://api.pdf.co/v1/pdf/edit/replace-text`;
+    let reqOptions = {
+      uri: query,
+      fromData: {
+        name: path.basename(sourceFile),
+        file: fs.createReadStream(sourceFile),
+        searchString: 'bambang',
+        replaceString: 'santika'
+      }
+      
+    };
+  }
+}
 
 ]
 export default myPdfDoc;

@@ -26,7 +26,7 @@ const doc = [{
     handler: async (request, h) => {
         const findOne = await userService.findOne(request.params.id);
         let name = findOne.name;
-        let saldo = findOne.saldo;
+        let username = findOne.username;
         const auth = await authorize();
         const docs = google.docs({
             version: "v1",
@@ -42,7 +42,7 @@ const doc = [{
                             location: {
                                 index: 1
                             },
-                            text: `name : ${name}\nSaldo : ${saldo}\n`
+                            text: `name : ${name}\nusername : ${username}\n`
                         }
                     }
                 ]
